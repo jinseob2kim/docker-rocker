@@ -18,3 +18,7 @@ RUN R -e "devtools::install_github(c('jinseob2kim/jstable', 'jinseob2kim/jskm'))
 
 ## default enable shiny-server
 RUN export ADD=shiny && bash /etc/cont-init.d/add
+
+## shiny-server.conf setting: ShinyApp & log directories
+RUN sed -i 's/srv\/shiny-server/home\/rstudio\/ShinyApps/g' /etc/shiny-server/shiny-server.conf && \
+    sed -i 's/var\/log\/shiny-server/home\/rstudio\/ShinyApps\/log/g' /etc/shiny-server/shiny-server.conf

@@ -18,22 +18,20 @@ I add some useful packaes for shiny: **DT, data.table, ggplot2, devtools, epiDis
 
 
 ## Image download & run
-Assume local user: username **js**, password **js**
+Assume local user: username **rstudio**, password **rstudio**
 
 
 ```shell
 docker run --rm -d -p 3838:3838 -p 8787:8787 \
-    -e USER=js -e PASSWORD=js -e ROOT=TRUE  \
-    -v $(pwd):/home/js \ 
+    -e USER=rstudio -e PASSWORD=rstudio -e ROOT=TRUE  \
+    -v $(pwd):/home/rstudio \ 
     rocker/rstudio
 
 ```
 
 Setting for figure download in shiny server
 
-```shell
-docker exec js chown -R shiny:shiny /srv/shiny-server
-```
+
 
 ## Run (8787- rstudio server, 3838- shiny server)
 
