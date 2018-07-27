@@ -1,4 +1,4 @@
-FROM rocker/rstudio:devel
+FROM rocker/rstudio-stable:latest
 
 MAINTAINER Jinseob Kim "jinseob2kim@gmail.com"
 
@@ -6,7 +6,8 @@ MAINTAINER Jinseob Kim "jinseob2kim@gmail.com"
 RUN apt-get update -qq && apt-get -y --no-install-recommends install \
   libxml2-dev \
   libcairo2-dev \
-  libgit2-dev 
+  libgit2-dev \
+  tk-table
   
   
 RUN R -e "install.packages(c('DT', 'data.table', 'ggplot2', 'devtools', 'epiDisplay', 'tableone', 'svglite', 'plotROC', 'pROC', 'labelled', 'geepack', 'lme4', 'PredictABEL', 'shinythemes', 'maxstat'), repos='https://cran.rstudio.com/')" 
