@@ -23,4 +23,4 @@ RUN sed -i 's/srv\/shiny-server/home\/rstudio\/ShinyApps/g' /etc/shiny-server/sh
     sed -i 's/var\/log\/shiny-server/home\/rstudio\/ShinyApps\/log/g' /etc/shiny-server/shiny-server.conf
     
 ## Download private ShinyApps
-git clone https://github.com/jinseob2kim/ShinyApps /home/rstudio/ShinyApps
+RUN git clone https://github.com/jinseob2kim/ShinyApps /home/rstudio/ShinyApps
