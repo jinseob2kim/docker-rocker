@@ -29,7 +29,7 @@ docker run --rm -d -p 3838:3838 -p 8787:8787 \
 
 ```
 
-Setting for figure download in shiny server
+Default shinyapps directory is `/home/rstudio/ShinyApps`
 
 
 
