@@ -24,3 +24,14 @@ RUN sed -i 's/srv\/shiny-server/home\/rstudio\/ShinyApps/g' /etc/shiny-server/sh
     
 ## Download private ShinyApps
 RUN git clone https://github.com/jinseob2kim/ShinyApps /home/rstudio/ShinyApps
+
+## Permission
+RUN groupadd shiny-apps && \
+    usermod -aG shiny-apps rstudio && \
+    usermod -aG shiny-apps shiny && \
+    cd /home/rstudio/ShinyApps && \
+    chown -R rstudio:shiny-apps . && \
+    chmod g+w . && \
+    chmod g+s .
+    
+
