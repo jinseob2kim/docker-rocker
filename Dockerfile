@@ -1,4 +1,4 @@
-FROM rocker/rstudio-stable:latest
+FROM rocker/rstudio-stable:3.4.4
 
 MAINTAINER Jinseob Kim "jinseob2kim@gmail.com"
 
