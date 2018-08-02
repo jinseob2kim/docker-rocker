@@ -10,7 +10,7 @@ RUN apt-get update -qq && apt-get -y --no-install-recommends install \
   tk-table
   
   
-RUN R -e "install.packages(c('DT', 'data.table', 'ggplot2', 'devtools', 'epiDisplay', 'tableone', 'svglite', 'plotROC', 'pROC', 'labelled', 'geepack', 'lme4', 'PredictABEL', 'shinythemes', 'maxstat'), repos='https://cran.rstudio.com/')" 
+RUN R -e "install.packages(c('DT', 'data.table', 'ggplot2', 'devtools', 'epiDisplay', 'tableone', 'svglite', 'plotROC', 'pROC', 'labelled', 'geepack', 'lme4', 'PredictABEL', 'shinythemes', 'maxstat', 'manhattanly'), repos='https://cran.rstudio.com/')" 
 
 ## Private packages by Jinseob Kim
 RUN R -e "devtools::install_github(c('jinseob2kim/jstable', 'jinseob2kim/jskm'))"

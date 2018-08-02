@@ -14,7 +14,7 @@ Docker images for rstudio and shiny-server: Add some packages to rocker & shiny-
 Original docker image: https://hub.docker.com/r/rocker/rstudio/
 
 
-I add some useful packaes for shiny: **DT, data.table, ggplot2, devtools, epiDisplay, tableone, svglite, plotROC, pROC, labelled, geepack, lme4, PredictABEL, shinythemes, maxstat**
+I add some useful packaes for shiny: **DT, data.table, ggplot2, devtools, epiDisplay, tableone, svglite, plotROC, pROC, labelled, geepack, lme4, PredictABEL, shinythemes, maxstat, plotly, manhattanly**
 
 
 ## Image download & run
