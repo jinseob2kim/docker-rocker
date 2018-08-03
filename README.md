@@ -25,7 +25,7 @@ Assume local user: username **rstudio**, password **rstudio**
 docker run --rm -d -p 3838:3838 -p 8787:8787 \
     -e USER=rstudio -e PASSWORD=rstudio -e ROOT=TRUE  \
     -v $(pwd):/home/rstudio \ 
-    rocker/rstudio
+    jinseob2kim/docker-rocker
 
 ```
 
