@@ -1,14 +1,18 @@
-FROM rocker/rstudio-stable:3.4.4
+FROM rocker/rstudio-stable:latest
 
 MAINTAINER Jinseob Kim "jinseob2kim@gmail.com"
 
 
 RUN apt-get update -qq && apt-get -y --no-install-recommends install \
+  locales \
   libxml2-dev \
   libcairo2-dev \
   libgit2-dev \
   tk-table
-  
+
+# Use UTF-8
+RUN locale-gen en_US.UTF-8
+ENV LANG en_US.UTF-8  
   
 RUN R -e "install.packages(c('DT', 'data.table', 'ggplot2', 'devtools', 'epiDisplay', 'tableone', 'svglite', 'plotROC', 'pROC', 'labelled', 'geepack', 'lme4', 'PredictABEL', 'shinythemes', 'maxstat', 'manhattanly'), repos='https://cran.rstudio.com/')" 
 
